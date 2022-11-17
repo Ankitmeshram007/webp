@@ -12,6 +12,11 @@ body{
     min-height: 100vh;
     background: #43AFFC;
 }
+::selection{
+    color: #fff;
+    background: #43AFFC;
+  }
+
 .wrapper{
     width: 400px;
     background: #fff;
@@ -30,41 +35,15 @@ body{
 }
 header i{
     cursor: pointer;
-    font-size:  30px;
+    font-size:  0em;
     margin-right: 8px;
 
 
 }
-.input-part .info-txt{
-    display: none;
-    font-size: 17px ;
-    text-align: center;
-    padding: 12px 10px;
-    border-radius: 7px;
-    margin-bottom: 15px;
-
-}
-
-.info-txt.error{
-    display: block;
-    color: #721c24;
-    background: #f8d7da;
-    border: 1px solid #f5c6cb ;
-    
-
-}
-.info-txt.pending{
-    color: #0c5460;
-    background: #d1ecf1;
-    border: 1px solid #bee5eb;
-    
-
-} 
 .wrapper.active header i{
     font-size: 30px;
     margin-left: 5px;
 }
-
 .wrapper .input-part{
     margin: 20px 25px 30px;
  
@@ -76,6 +55,35 @@ header i{
 .wrapper.active .input-part{
     display:none ;
 }
+
+.input-part .info-txt{
+    display: none;
+    font-size: 17px ;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+
+}
+
+.input-part .info-txt.error{
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb ;
+    
+
+}
+.input-part .info-txt.pending{
+    color: #0c5460;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    
+
+} 
+
+
+
 
 .input-part :where(input, button){
     width: 100%;
@@ -96,6 +104,9 @@ header i{
     border: 2px solid #43AFFC;
 
 }
+.input-part input::placeholder{
+    color: #bfbfbf;
+  }
 .input-part .separator{
     height: 20px ;
     width: 100%;
@@ -121,6 +132,9 @@ header i{
     cursor: pointer;
     background: #43AFFC;
 }
+.input-part button:hover{
+    background: #1d9ffc;
+  }
 .wrapper .weather-part{
     margin: 30px 0 0;
     display: none;
